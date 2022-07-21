@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.header{
+    text-align: center;
+    font-family: 'Square Peg', cursive;
+    font-size: 3em;
+    background-color: rgb(15, 15, 44);
+    color: white;
+}
