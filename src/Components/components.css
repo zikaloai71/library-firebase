@@ -1,6 +1,7 @@
 *{
     margin: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 .header{
     text-align: center;
@@ -8,4 +9,72 @@
     font-size: 3em;
     background-color: rgb(15, 15, 44);
     color: white;
+}
+
+form{
+    background-color:rgb(21, 17, 17);
+    background-size: cover;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 5em;
+    color: gainsboro;
+    font-size: 1.2em;
+    margin-top: 1%;
+
+}
+form input {
+    display: block;
+    margin: auto;
+    width: 80%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    outline: 0;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius:10px ;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+form button{
+    width: 40%;
+    margin: 10px 0px 0px 30%;
+    height: 30px;
+   color:white;
+   font-weight: bold;
+   cursor: pointer;
+   background-color:rgb(15, 15, 44);
+   outline: 0px;
+   border: 0px;
+   border-radius: 5px;
+}
+form button:hover{
+opacity: 0.9;
+}
+
+.card{
+    width:30%;
+    background-color: rgb(15, 15, 44);
+    color: white;
+    font-size: large;
+    padding: 2em;
+    border-radius: 5px;
+    box-shadow: -3px 1px 50px -11px rgb(43, 29, 58);
+    font-family:  cursive;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.card button{
+    width: 100%;
+    background-color: rgb(225, 42, 42);
+    margin-top: 1em;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 0.5em;
 }

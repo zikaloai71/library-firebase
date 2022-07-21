@@ -2,7 +2,6 @@ import "./components.css";
 import { useState } from "react";
 import { addDoc} from "firebase/firestore";
 
-
 function Form(props){
 let [bookName , setBookName]=useState('');
 let [author , setAuthorName]=useState('');
@@ -15,8 +14,18 @@ const createCard = async()=>{
         numberOfPages:Number(numberOfPages)
     });
 }
+function checkForm(){
+    if(bookName===""||author===""||numberOfPages===0){
+        return(
+        alert("you must enter all the fields")
+        )
+    }
+    else{
+        createCard();
+    }
+}
 return(
-    <form className="toggle-display">
+    <form>
     <label>Author</label>
     <input id="author" type="text" onChange={(e)=>{
         setAuthorName(e.target.value)
@@ -31,7 +40,7 @@ return(
     }} />
     <button id="add-book" onClick={(e)=>{
         e.preventDefault();
-        createCard()
+        checkForm();
         }}>Add Book</button>
 </form>
 

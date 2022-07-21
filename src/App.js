@@ -6,6 +6,7 @@ import Card from "./Components/Card.js";
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 
+
 function App() {
   let [showCards, setShowCards] = useState([]);
   let cardRef = collection(db, "books");
@@ -15,13 +16,14 @@ function App() {
       setShowCards(cards.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
     getCards();
-  },[cardRef]);
+  });
 
 
   return (
     <>
       <Header />
       <Form cardRef={cardRef} />
+      <div className="booksContainer">
       {showCards.map((card) => {
         return (
           <Card
@@ -29,10 +31,11 @@ function App() {
             bookName={card.bookName}
             numberOfPages={card.numberOfPages}
             key={card.id}
+            cardId={card.id}
           />
         );
       })}
-
+      </div>
     </>
   );
 }
